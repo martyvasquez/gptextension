@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div style="display: flex; justify-content: space-between;">
+    <h3>Manage Actions</h3>
+    <!-- Gear icon to open settings -->
+    <button id="settings-gear" class="md-icon-button">⚙️</button>
+  </div>
+
+  <div id="action-list">
+    <!-- Actions will be dynamically inserted here -->
+  </div>
+  <button id="add-action" class="md-button md-button--raised">+ Add New Action</button>
+
+  <!-- Template for actions -->
+  <template id="action-template">
+    <div class="md-card action-item">
+      <div class="action-header">
+        <span class="action-name">Action Name</span>
+        <div class="action-buttons">
+          <button class="md-icon-button delete-action">🗑️</button>
+        </div>
+      </div>
+      <div class="action-accordion">
+        <label>
+          Name: <input type="text" class="action-name-input">
+        </label>
+        <label>
+          Prompt: <textarea class="action-prompt-input" rows="3" placeholder="Use {{highlightedText}} for selected text."></textarea>
+        </label>
+        <button class="md-button md-button--outlined save-action">Save</button>
+      </div>
+    </div>
+  </template>
+
+  <!-- Settings accordion (hidden by default) -->
+  <div id="settings-accordion" style="display: none;">
+    <h4>Settings</h4>
+    <label>
+      API Key: 
+      <input type="password" id="api-key-input" placeholder="Enter your API key">
+    </label>
+    <label>
+      Default GPT Model: 
+      <input type="text" id="gpt-model-input" placeholder="Enter GPT model (e.g., gpt-3.5-turbo)">
+    </label>
+    <button id="save-settings" class="md-button md-button--outlined">Save</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

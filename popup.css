@@ -1,0 +1,112 @@
+/* Basic Material Design Emulation */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 16px;
+  background-color: #f5f5f5;
+  margin: 0;
+  width: 320px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Material Design Button */
+.md-button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.md-button--raised {
+  background-color: #6200ea;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.md-button--raised:hover {
+  background-color: #5a00d1;
+}
+
+.md-button--outlined {
+  background-color: transparent;
+  border: 2px solid #6200ea;
+  color: #6200ea;
+}
+
+.md-button--outlined:hover {
+  background-color: rgba(98, 0, 234, 0.1);
+}
+
+/* Material Design Card */
+.md-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.action-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6200ea;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+}
+
+.md-icon-button {
+  background: none;
+  border: none;
+  color: #757575;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 8px;
+}
+
+.md-icon-button:hover {
+  color: #6200ea;
+}
+
+/* Adjusting widths for fields to match "new action" button and "save" button width */
+input[type="text"], textarea, input[type="password"] {
+  width: calc(100% - 32px); /* Matches the button width with padding accounted */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Settings section styling */
+#settings-accordion {
+  margin-top: 20px;
+}
+
+#api-key-input, #gpt-model-input {
+  width: calc(100% - 32px); /* Ensure same width as buttons */
+}
